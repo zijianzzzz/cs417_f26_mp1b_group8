@@ -36,6 +36,6 @@ namespace MichaelManor
         }
         public void ResetProgress()
         { clues = new bool[3]; PuzzlesSolved = 0; CluesFound = 0; Refresh(); }
-        private void Refresh() { if (display != null) display.text = $"PUZZLES SOLVED  {PuzzlesSolved} / 3\nCLUES FOUND     {CluesFound} / 3"; }
+        private void Refresh() { if (display != null) display.text = $"PUZZLES  {PuzzlesSolved} / 3     CLUES  {CluesFound} / 3"; }
     }
 }
