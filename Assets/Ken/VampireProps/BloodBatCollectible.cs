@@ -69,6 +69,16 @@ public class BloodBatCollectible : XRBaseInteractable
             if (renderer != null) renderer.SetPropertyBlock(active ? highlight : null);
     }
 
+    public void ResetBat()
+    {
+        pendingCatch = false;
+        waitingToRespawn = false;
+        respawnAt = 0f;
+        if (model != null) model.SetActive(true);
+        if (catchCollider != null) catchCollider.enabled = true;
+        SetHighlight(false);
+    }
+
     private void Update()
     {
         if (waitingToRespawn)

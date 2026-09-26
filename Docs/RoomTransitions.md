@@ -1,6 +1,6 @@
 # Ken to Michael
 
-Michael is now the final escape room. Its existing ritual completion and victory celebration end the game; the former outgoing portal to Minh's room has been removed.
+Michael's ritual opens its exit into the connected Blood Moon Seal chamber. The combined bat-and-lever challenge there triggers final victory; it uses the same scene and player rig. See [combined challenge](FinalCombinedChallenge.md). The former outgoing portal to Minh's room remains removed.
 
 Open `Assets/Shared/Scenes/StartScreen.unity` and enter Play Mode, then select **START GAME** (or press Enter) to enter Ken's room. The enabled build order is StartScreen, Ken, Michael. You can still open `Assets/Ken/Scenes/Ken's_room.unity` directly to test the puzzle. Merely including Michael in the build list does not load his room at startup. See [start screen setup](StartScreen.md).
 

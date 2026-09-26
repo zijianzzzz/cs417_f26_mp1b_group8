@@ -31,6 +31,7 @@ namespace MichaelManor
         [SerializeField] private Transform exitDoor;
         [SerializeField] private Transform exitDoorSeal;
         [SerializeField] private WinCelebrationController celebration;
+        [SerializeField] private CombinedFinalChallenge finalChallenge;
         [SerializeField] private float transitionDuration = 1.15f;
         [SerializeField] private float doorOpenHeight = 5.6f;
         [SerializeField] private float doorOpenDuration = 2.25f;
@@ -53,6 +54,8 @@ namespace MichaelManor
         public int CurrentStage => currentStage;
         public int StageCount => sockets != null ? sockets.Length : 0;
         public bool IsComplete => StageCount > 0 && currentStage >= StageCount;
+        public bool ExitIsOpen { get; private set; }
+        public CombinedFinalChallenge FinalChallenge => finalChallenge;
         public TMP_Text ProgressText => progressText;
         public TMP_Text InstructionText => instructionText;
         public event Action<int> StageCompleted;
@@ -440,7 +443,13 @@ namespace MichaelManor
                 exitDoor.localPosition = openPosition;
             }
 
-            celebration?.TriggerWin();
+            ExitIsOpen = true;
+            if (finalChallenge != null)
+            {
+                if (instructionText != null) instructionText.text = "MANOR RITUAL COMPLETE - ENTER THE FINAL CHAMBER THROUGH THE EXIT";
+                finalChallenge.BeginChallenge();
+            }
+            else celebration?.TriggerWin();
         }
 
         private IEnumerator RejectSelection(
@@ -719,6 +728,8 @@ namespace MichaelManor
                 exitDoorSeal.localRotation = sealStartRotation;
             }
 
+            ExitIsOpen = false;
+            finalChallenge?.ResetChallenge();
             celebration?.ResetCelebration();
             ActivateCurrentStageLight();
             UpdateGuidance();

@@ -36,7 +36,7 @@ The repository owner must invite teammates through GitHub repository Settings â†
 
 The build starts in a separate foyer, `StartScreen`. Select **START GAME** with the XR UI trigger or mouse, or press **Enter**, to enter `Ken's_room`. After solving all three seals and seeing the win message, click the **left controller thumbstick** or press **N** to enter `MichaelManorHall`. Only one scene is loaded at a time, so both rooms can stay at the origin. See [start screen setup](Docs/StartScreen.md) and [room transition checks](Docs/RoomTransitions.md). The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
 
-Michael is the final room: completing its ritual opens the exit and plays the victory celebration, with no further scene transition.
+Michael's ritual opens a connected final chamber, **Blood Moon Seal**. Catch three bats with right-hand ray/grip, pull LEFT, catch three more, then pull RIGHT to open the final exit and win. The chamber combines Ken's bat collection with Michael's ordered levers inside the same scene. See [combined challenge](Docs/FinalCombinedChallenge.md).
 
 ## Physics masses
 

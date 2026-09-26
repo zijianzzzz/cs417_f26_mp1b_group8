@@ -78,6 +78,9 @@ namespace MichaelManor
             int explored = quest != null ? quest.ExploredCount : 0;
             int objective = CurrentObjective(stage);
             int key = (stage * 8 + explored) * 16 + objective;
+            var final = ritual.FinalChallenge;
+            int finalState = final == null ? 0 : final.IsComplete ? 3 : ritual.ExitIsOpen ? 2 : 1;
+            key = key * 4 + finalState;
             if (key != lastKey)
             {
                 lastKey = key;
@@ -89,6 +92,12 @@ namespace MichaelManor
                     $"LOCKS REMAINING    {remaining}\n" +
                     $"CHAMBERS EXPLORED  {explored} / {FiveChamberQuestController.RequiredChamberCount}";
                 instructionValue = Objectives[objective];
+                if (objective == 6 && final != null)
+                    instructionValue = final.IsComplete
+                        ? "YOU ESCAPED\nBOTH RITUALS MASTERED"
+                        : ritual.ExitIsOpen
+                            ? "MANOR RITUAL COMPLETE\nENTER THE FINAL CHAMBER\nTHROUGH THE EXIT"
+                            : "MANOR RITUAL COMPLETE\nTHE FINAL CHAMBER IS OPENING";
             }
 
             // The ritual controller still writes its own legacy text on stage events; keep ours on top.

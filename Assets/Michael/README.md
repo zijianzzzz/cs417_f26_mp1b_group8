@@ -26,8 +26,10 @@ Michael Manor is a five-chamber ritual escape with three ordered Key Props and L
 3. In the Moon Crypt press WOLF -> MOON -> BLOOD (wrong orders flash red and reset)
    within the 2:30 timer. A slab slides aside; place the Moonstone in the Celestial Lock.
 4. Pull the LEFT -> RIGHT levers to release the Blood Sigil, return to the hall, and
-   place it in the exit pedestal. The seal retracts, the door opens, the win
-   celebration plays, and `Congratulations` shows for five seconds.
+   place it in the exit pedestal. The seal retracts and the door opens into the
+   final combined chamber.
+5. Catch three bats with right-hand ray/grip, select LEFT, catch three more,
+   then select RIGHT. The final gate opens and the victory announcement plays.
 
 The hall board tracks ritual progress, keys and locks remaining, chambers explored,
 puzzles solved, clues found, Moon Shards (8 optional collectibles), and the current
@@ -38,17 +40,18 @@ every Lock.
 
 ## Final room
 
-Michael's room is the final escape room. After the last ritual, the exit door lifts
-and the existing victory celebration plays. The player remains in Michael's room;
-there is no outgoing scene portal or next-room keyboard shortcut. The existing
-RESTART control can reset the room for another attempt.
+The Blood Moon Seal chamber connects directly behind Michael's exit door in this
+scene. Its bats and levers activate only after the manor ritual finishes opening
+the door. Each lever needs a fresh three-bat charge; pressing a charged lever in
+the wrong order resets the sequence and charge. The existing RESTART control
+resets both the manor and final challenge. See `Docs/FinalCombinedChallenge.md`.
 
 ## Presentation controls
 
 These keyboard shortcuts work in Play Mode and make the room easy to demonstrate
 without a headset:
 
-- `K`: reset and play all three Lock insertions, the door, and the win sequence
+- `K`: reset and play all three manor Lock insertions and open the final chamber
 - `W`: replay the win celebration
 - `R`: reset the puzzle, door, and celebration
 - `P`: spawn an orbiting object

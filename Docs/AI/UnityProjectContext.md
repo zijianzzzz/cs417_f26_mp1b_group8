@@ -1,5 +1,18 @@
 # MP1B project context
 
+## Combined final chamber (2026-09-26)
+
+MichaelManorHall now contains a native `Final Combined Ritual` room behind the
+existing exit at approximately (0, 0.07, 15.49), extending along +Z. Michael's
+ritual completion opens this entrance and activates the final interactions;
+final victory moves to the combined challenge. The flow is three right-hand
+ray/grip bat catches, LEFT lever, three new catches, RIGHT lever, animated final
+gate, victory. Wrong charged lever resets charge and sequence. Shared
+CombinedFinalChallenge coordinates optional extensions to BloodBatCollection and
+ManorKeyReleasePuzzle; existing puzzles keep their defaults. ManorQuestScoreboard
+tracks the final phase. Restart resets both areas. No XR or build-settings edits
+belong to this feature. See `Docs/FinalCombinedChallenge.md` for validation.
+
 ## Two-room game (2026-09-26)
 
 Minh's room was removed at the user's request. The build now ends in Michael's room after its existing ritual, exit-door animation, and victory celebration. Removed `Assets/Scenes/SampleScene.unity`, its recovery scenes, `Assets/Minh`, and the exclusively referenced imported models in `Assets/Models`. The project-wide `InputSystem_Actions.inputactions` was moved back to `Assets/` with its original metadata/GUID so project settings keep their input references. Removed only the Minh portal hierarchy and its ManorScenePortal component/script from Michael's scene; Michael's puzzle and celebration objects are retained. Generic carryable-item assets are retained. No XR provider or simulator settings were changed.
