@@ -1,8 +1,10 @@
 # MP1B project context
 
-## Minh integration compile correction (2026-09-23)
+## Two-room game (2026-09-26)
 
-The main-branch integration at `2f34a8c` introduced a second global `LightSwitch` in `Assets/Minh/LightSwitch.cs`, conflicting with Ken's existing `Assets/Ken/light.cs` and producing CS0101. Minh's class is now `MinhRoom.LightSwitch`; its file name, script GUID, fields, and behavior are unchanged. Only its two serialized class identifiers in `Assets/Scenes/SampleScene.unity` and `Assets/_Recovery/0 (1).unity` were updated. Unity 6000.5.6f1's bundled C# compiler reproduced the error before the change and compiled all 84 current default-assembly scripts after it using the project's Unity references and compiler options. Existing obsolete-API warnings remain in Michael's ManorPuzzleSocket. This check does not validate scene gameplay or model imports.
+Minh's room was removed at the user's request. The build now ends in Michael's room after its existing ritual, exit-door animation, and victory celebration. Removed `Assets/Scenes/SampleScene.unity`, its recovery scenes, `Assets/Minh`, and the exclusively referenced imported models in `Assets/Models`. The project-wide `InputSystem_Actions.inputactions` was moved back to `Assets/` with its original metadata/GUID so project settings keep their input references. Removed only the Minh portal hierarchy and its ManorScenePortal component/script from Michael's scene; Michael's puzzle and celebration objects are retained. Generic carryable-item assets are retained. No XR provider or simulator settings were changed.
+
+Validation: all 98 remaining default-assembly scripts compile with Unity 6000.5.6f1's bundled C# compiler and the project's references/options (existing obsolete-API warnings remain). Scanning remaining serialized assets/settings found no references to removed asset GUIDs. Scene comparison confirms only the portal's 27 GameObjects/105 serialized blocks and its parent-child entry were removed; every other serialized block is unchanged. The shared input asset contents and GUID are preserved. No new VR Play Mode test was performed.
 
 ## Start screen (2026-09-23)
 
@@ -16,7 +18,7 @@ The local integration branch adds `RoomSceneTransition` to Ken's `VampireRelics`
 
 ## Asset ownership (2026-09-21)
 
-Ken's scene and room-specific scripts, shaders, materials, models, audio, and prefabs are under `Assets/Ken`. The scene is `Assets/Ken/Scenes/Ken's_room.unity`; its GUID remains `99c9720ab356a0642a771bea13969a05`. Existing asset and folder GUIDs were preserved during moves. Build Settings, the default scene path, and the Web profile's serialized default scene path follow the rename. `Assets/Minh` and `Assets/Michael` are reserved for the other contributors. Shared XR/sample/font/configuration assets remain at their original paths.
+Ken's scene and room-specific scripts, shaders, materials, models, audio, and prefabs are under `Assets/Ken`. The scene is `Assets/Ken/Scenes/Ken's_room.unity`; its GUID remains `99c9720ab356a0642a771bea13969a05`. Existing asset and folder GUIDs were preserved during moves. Build Settings, the default scene path, and the Web profile's serialized default scene path follow the rename. Michael's room belongs under `Assets/Michael`. Shared XR/sample/font/configuration assets remain outside the owner folders.
 
 ## Team baseline (2026-09-21)
 

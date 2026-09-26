@@ -1,5 +1,7 @@
 # Ken to Michael
 
+Michael is now the final escape room. Its existing ritual completion and victory celebration end the game; the former outgoing portal to Minh's room has been removed.
+
 Open `Assets/Shared/Scenes/StartScreen.unity` and enter Play Mode, then select **START GAME** (or press Enter) to enter Ken's room. The enabled build order is StartScreen, Ken, Michael. You can still open `Assets/Ken/Scenes/Ken's_room.unity` directly to test the puzzle. Merely including Michael in the build list does not load his room at startup. See [start screen setup](StartScreen.md).
 
 Once all three matching relics are installed and their opening animations finish, the existing `VampireEscape` win message appears. Its progress label changes to the next-room instructions. Click the **left controller thumbstick** or press **N** on the keyboard. A button held before winning must be released and pressed again. While loading, further presses are ignored.

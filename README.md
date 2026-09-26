@@ -22,9 +22,9 @@ The baseline uses URP 17.5.0, Input System 1.20.0, XR Interaction Toolkit 3.5.1,
 
 ## Team contributions
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a scene. Each teammate owns a separate scene and asset folder, works on a branch, and opens a pull request. Commit asset `.meta` files alongside the assets.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before adding a scene. Each teammate owns a separate scene and asset folder. For now, work directly on `main`, pull teammate updates before pushing, and coordinate shared scene edits. Commit asset `.meta` files alongside the assets.
 
-Owner folders: `Assets/Ken`, `Assets/Minh`, and `Assets/Michael`. Ken's room assets are grouped under `Ken`; the other two folders are ready for new contributions. Shared XR assets, samples, fonts, input actions, and project configuration remain at the top level.
+Owner folders: `Assets/Ken` and `Assets/Michael`. Shared XR assets, samples, fonts, input actions, and project configuration remain outside these folders. The project-wide input asset is `Assets/InputSystem_Actions.inputactions`.
 
 The repository owner must invite teammates through GitHub repository Settings â†’ Collaborators. Write access is needed to push branches to this repository.
 
@@ -35,5 +35,7 @@ The repository owner must invite teammates through GitHub repository Settings â†
 - [Project context and inherited development notes](Docs/AI/UnityProjectContext.md)
 
 The build starts in a separate foyer, `StartScreen`. Select **START GAME** with the XR UI trigger or mouse, or press **Enter**, to enter `Ken's_room`. After solving all three seals and seeing the win message, click the **left controller thumbstick** or press **N** to enter `MichaelManorHall`. Only one scene is loaded at a time, so both rooms can stay at the origin. See [start screen setup](Docs/StartScreen.md) and [room transition checks](Docs/RoomTransitions.md). The project keeps its inherited Unity application settings; agree on any MP1B application-name or Android package-identifier changes before a release.
+
+Michael is the final room: completing its ritual opens the exit and plays the victory celebration, with no further scene transition.
 
 This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. The room transition has passed an isolated Unity Play Mode check with a simulated win; full puzzle and headset validation remain manual checks.

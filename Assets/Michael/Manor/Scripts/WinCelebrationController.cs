@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MichaelManor
 {
     /// <summary>
-    /// Reusable final-game celebration. Minh's scene connector can call TriggerWin().
+    /// Final-game celebration triggered when Michael's last ritual is complete.
     /// </summary>
     public sealed class WinCelebrationController : MonoBehaviour
     {

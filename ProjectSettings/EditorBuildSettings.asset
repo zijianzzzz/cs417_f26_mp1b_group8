@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Michael/Scenes/MichaelManorHall.unity
     guid: 457299830e31f41c59c5490995685981
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 1026fabd25dc1b84f88d7f0d6c38106b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 48993bc9db0920141a5e855c8dacfd21, type: 2}

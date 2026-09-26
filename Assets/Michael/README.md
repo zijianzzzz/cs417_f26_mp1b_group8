@@ -36,14 +36,12 @@ Inspection props (blacklight, hand mirror, magnifying glass) and angle-revealed
 writing hide optional clues; 13 grabbable FALSE RELIC red herrings are rejected by
 every Lock.
 
-## Next room: Minh
+## Final room
 
-After the win, the exit door lifts to reveal a glowing portal marked `TO MINH'S ROOM`.
-Walk into it (or press `N` on a keyboard) to load the next room: the scene listed right after
-Michael's in Build Settings, currently Minh's room (`Assets/Scenes/SampleScene.unity`). Unity
-keeps that list up to date if Minh renames or moves the scene, so the portal needs no change. Anything held in either hand comes along: its carry
-prefab (`Manor/Prefabs/Carry/`) is instantiated in Minh's scene and placed back into the
-same hand.
+Michael's room is the final escape room. After the last ritual, the exit door lifts
+and the existing victory celebration plays. The player remains in Michael's room;
+there is no outgoing scene portal or next-room keyboard shortcut. The existing
+RESTART control can reset the room for another attempt.
 
 ## Presentation controls
 
