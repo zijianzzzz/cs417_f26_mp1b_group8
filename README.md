@@ -38,4 +38,10 @@ The build starts in a separate foyer, `StartScreen`. Select **START GAME** with 
 
 Michael is the final room: completing its ritual opens the exit and plays the victory celebration, with no further scene transition.
 
+## Physics masses
+
+Across Ken's and Michael's room props, the lowest Rigidbody mass is **0.25 kg** (Moonstone and several of Ken's decoys), and the highest is **1.5 kg** (Blood Sigil). The heaviest-to-lightest ratio is **1.5 / 0.25 = 6:1**, below 20:1. Other examples include Ken's relic keys at 0.3 kg, the watering can at 0.6 kg, and Michael's Silver Fang at 0.8 kg. Moonstone and Blood Sigil have matching mass values in the scene and their carry prefabs. Collision behavior still needs a Play Mode/headset check.
+
+Including imported sample scenes and prefabs under `Assets`, the serialized mass range is **0.25–2 kg**, or **8:1**. The 2 kg maximum belongs to the XR Interaction Toolkit sample `Torus-Cut.prefab`; it is not referenced by the two game rooms or their shared assets.
+
 This repository starts with a fresh Git history. MP1A's repository remains separate. Generated caches, builds, debug backups, and individual submission documents/videos are not part of this baseline. The room transition has passed an isolated Unity Play Mode check with a simulated win; full puzzle and headset validation remain manual checks.
