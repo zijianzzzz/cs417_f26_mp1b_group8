@@ -4,7 +4,7 @@ Team Unity VR project, starting from Zijian's saved MP1A project on September 21
 
 ## Contributors
 
-- Zijian Zhong (zijianz7)
+- Zijian Zhong (zijianz7@illinois.edu)
 - Ziyang Li (ziyangl7@illinois.edu)
 
 ## Open the project
