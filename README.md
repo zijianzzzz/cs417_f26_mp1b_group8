@@ -2,6 +2,11 @@
 
 Team Unity VR project, starting from Zijian's saved MP1A project on September 21, 2026, including local scene/settings edits and Resources assets.
 
+## Contributors
+
+- Zijian Zhong (zijianz7)
+- Ziyang Li (ziyangl7@illinois.edu)
+
 ## Open the project
 
 1. Install Git, Git LFS, and Unity **6000.5.6f1** through Unity Hub. Install Android Build Support (SDK/NDK and OpenJDK) for Quest builds.
